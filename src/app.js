@@ -14,11 +14,12 @@ const app = new Koa();
 app.context.orm = orm;
 
 // Por si hay problemas de cors
-app.use(cors(cors({
-  origin: ["*"],
+app.use(cors({
+  origin: '*',
   credentials: true,
   preflightContinue: false,
-})));
+  methods: ['GET', 'POST', 'DELETE'],
+}));
 
 // Logs requests from server
 app.use(KoaLogger());
