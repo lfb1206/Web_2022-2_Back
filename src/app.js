@@ -14,7 +14,12 @@ const app = new Koa();
 app.context.orm = orm;
 
 // Por si hay problemas de cors
-app.use(cors());
+app.use(cors({
+  origin: ['https://poetic-croissant-5e5bde.netlify.app'],
+  methods: ['GET', 'POST', 'DELETE'],
+  credentials: true,
+  origin: true,
+}));
 
 // Logs requests from server
 app.use(KoaLogger());
