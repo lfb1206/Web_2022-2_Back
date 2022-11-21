@@ -1,0 +1,42 @@
+module.exports = {
+  up: (queryInterface, Sequelize) => queryInterface.bulkInsert('Matches', [
+    {
+      cantidad_jugadores: 3,
+      tiempo_turno: 5,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+      puntos_victoria: 13,
+      current_player: 1,
+      iniciada: false,
+      conectados: 2,
+      usuario_creador: 0,
+      jugador_ganador: 'false',
+    },
+    {
+      cantidad_jugadores: 4,
+      tiempo_turno: 5,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+      puntos_victoria: 13,
+      current_player: 1,
+      iniciada: false,
+      conectados: 3,
+      usuario_creador: 0,
+      jugador_ganador: 'false',
+    },
+    {
+      cantidad_jugadores: 4,
+      tiempo_turno: 5,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+      puntos_victoria: 13,
+      current_player: 1,
+      iniciada: false,
+      conectados: 2,
+      usuario_creador: 0,
+      jugador_ganador: 'false',
+    },
+  ]),
+
+  down: (queryInterface, Sequelize) => queryInterface.bulkDelete('Matches', null, {}),
+};

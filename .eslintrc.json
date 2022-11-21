@@ -1,0 +1,25 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true,
+        "jest": true
+    },
+    "extends": "airbnb-base",
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "rules": {
+        "no-console": "off", // Para poder ir realizando logs explicativos
+        "no-unused-vars": "off", // Una forma de no olvidar donde queremos programar
+        "import/no-dynamic-require": "off", //Por el funcionamiento de koa, necesitamos utilizar algunas variables que no son strings
+        "global-require": "off", // Error que aparece en uno de los codigos entregados, por lo cual no lo queremos modificar. Models/index.js
+        "import/no-unresolved": "off",
+        "no-restricted-syntax": "off",
+        "guard-for-in": "off",
+        "no-await-in-loop": "off",
+        "no-shadow": "off"
+    }
+}
